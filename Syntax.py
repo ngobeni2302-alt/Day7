@@ -58,12 +58,17 @@ def clean_numbers(values):
     Example:
     ["10", 20, "30"] -> [10, 20, 30]
 
-    Requirements:
-    - Ignore values that cannot be converted
-    - Use try/except
     """
-    pass
+def clean_numbers(values):
+    ls = []
+    for i in values:
+        try:
+            ls.append(int(i))
+        except (ValueError, TypeError):
+            pass   # skip values that can't be converted
+    return ls
 
+print(clean_numbers(["10", 20, "30", "bad", 40.5]))
 
 def even_numbers_only(numbers):
     """
@@ -98,14 +103,14 @@ def summary_report(student):
 
 # ---------------- MAIN PROGRAM ----------------
 
-if __name__ == "__main__":
-    student = create_student()
+# if __name__ == "__main__":
+#     student = create_student()
 
-    # Clean marks in case they contain strings
-    student["marks"] = clean_numbers(student["marks"])
+#     # Clean marks in case they contain strings
+#     student["marks"] = clean_numbers(student["marks"])
 
-    report = summary_report(student)
-    print(report)
+#     report = summary_report(student)
+#     print(report)
 
-    print("\nEven marks only:")
-    print(even_numbers_only(student["marks"]))
+#     print("\nEven marks only:")
+#     print(even_numbers_only(student["marks"]))
