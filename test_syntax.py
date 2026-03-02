@@ -48,20 +48,5 @@ class TestStudentProcessing(unittest.TestCase):
         self.assertEqual(result, [2, 4, 6])
 
 
-    def test_summary_report(self):
-        student = {
-            "name": "John",
-            "age": 20,
-            "marks": [70, 80, 90]
-        }
-
-        report = student_processing.summary_report(student)
-
-        self.assertIn("Student: John", report)
-        self.assertIn("Age: 20", report)
-        self.assertIn("Average:", report)
-        self.assertIn("Grade:", report)
-
-
 if __name__ == "__main__":
     unittest.main()

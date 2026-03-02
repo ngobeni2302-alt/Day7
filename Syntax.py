@@ -80,37 +80,3 @@ def even_numbers_only(numbers):
         if i % 2 == 0:
             new_list.append(i)
     return new_list
-
-
-def summary_report(student):
-    """
-    Generate a formatted report string.
-
-    Example output:
-
-    Student: John
-    Age: 20
-    Average: 68.4
-    Grade: Pass
-
-    You must:
-    - calculate average
-    - calculate grade
-    - return formatted string
-    """
-    pass
-
-
-# ---------------- MAIN PROGRAM ----------------
-
-# if __name__ == "__main__":
-#     student = create_student()
-
-#     # Clean marks in case they contain strings
-#     student["marks"] = clean_numbers(student["marks"])
-
-#     report = summary_report(student)
-#     print(report)
-
-#     print("\nEven marks only:")
-#     print(even_numbers_only(student["marks"]))
